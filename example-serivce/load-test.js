@@ -1,6 +1,8 @@
 import http from 'k6/http';           // import dependencies
 import {sleep, check, group} from 'k6';
 
+const SERVICE_URL = ""
+
 export const options = {       // define test stages and duration
     stages: [
         {target: 5, duration: '10s'},  // ramp-up
