@@ -1,0 +1,14 @@
+stages:
+  - load-test
+
+image:
+  name: ubuntu:latest
+
+stage-load-test:
+  image:
+    name: loadimpact/k6:latest
+    entrypoint: ['']
+  stage: load-test
+  script:
+    - echo "executing local k6 in k6 container..."
+    - k6 run ./example-service/load-test.js
